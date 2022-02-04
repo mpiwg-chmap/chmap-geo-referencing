@@ -1,0 +1,24 @@
+//---------------------------------------------
+//
+//  data-layer index Component
+//
+//    1. Imports
+//    2. Component
+//
+//---------------------------------------------
+
+//---------------------------------------------
+// 1. Imports
+//---------------------------------------------
+
+@import "bootstrap.scss";
+@import "bootstrap-icons/font/bootstrap-icons";
+@import "leaflet-distortableimage/dist/vendor.css";
+@import "leaflet-distortableimage/dist/leaflet.distortableimage.css";
+
+//---------------------------------------------
+// 2. Component
+//---------------------------------------------
+
+@import "./geo-referencing";
+@import "./leaflet-photo";

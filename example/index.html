@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>CHMap</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <link rel="stylesheet" href="css/index.css" rel="stylesheet" />
+    <script src="../dist/js/chmap-geo-referencing.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div id="sidebar"
+             class="col-lg-2 col-md-3 col-sm-3 px-0 default-theme-dark show collapse-horizontal border-end"
+        >
+            <div id="sidebar-nav" class="list-group border-0 rounded-0 text-sm-start min-vh-100">
+                <div class="my-0 ps-3">
+                    <a class="d-flex align-items-center text-decoration-none link-light" href="index.html">
+                        <i class="bi bi-globe2 me-1 fs-3"></i>
+                        <span class="fs-2 fw-bold">CHMAP</span>
+                    </a>
+                </div>
+                <hr class="my-1" />
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <div class="accordion" id="accordionContainer">
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed default-theme-dark"
+                                            type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="true" aria-controls="collapseThree">
+                                        <i class="bi bi-grid me-2"></i>
+                                        GeoReferencing
+                                    </button>
+                                </h2>
+                                <div id="collapseThree"
+                                     class="accordion-collapse"
+                                     aria-labelledby="headingThree">
+                                    <div class="accordion-body default-theme-dark">
+                                        <ul class="nav nav-pills flex-column mb-auto">
+                                            <li>
+                                                <a id="loadLocalIIIFManifestFileBtn" class="nav-link text-white" href="#">
+                                                    <i class="bi bi-laptop"></i>
+                                                    Local file
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a id="loadOnlineIIIFManifestFileBtn" class="nav-link text-white" href="#">
+                                                    <i class="bi bi-cloud-download"></i>
+                                                    Online file
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main class="col ps-md-2">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div id="toolbar" class="container-fluid justify-content-md-around">
+                    <button id="sidebar-toggle-btn"
+                            class="btn btn-outline-success btn-sm p-0"
+                            data-bs-target="#sidebar"
+                            data-bs-toggle="collapse">
+                        <i class="bi bi-list bi-lg py-2 p-1"></i>
+                        <i class="bi bi-chevron-left bi-lg py-2 p-1"></i>
+                    </button>
+                    <div id="toolbar-dynamic" class="container" ></div>
+                    <button id="layers-toggle-btn"
+                            class="btn btn-outline-success btn-sm p-0"
+                            style="visibility: hidden;"
+                    >
+                        <i class="bi bi-list bi-lg py-2 p-1"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="border mt-2">
+                <div id="map" />
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+<script type="module" src="js/index.js"  crossorigin="anonymous"/>
+</html>
