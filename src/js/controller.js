@@ -76,6 +76,24 @@ const GeoReferencingController = function() {
 
     }
 
+    function bindFloatingPanelEvent (panel, eventPrefix){
+
+        panel.on('shown', (panelDOM) => {
+
+            localEventEmitter.emit(`${eventPrefix}.shown`, panelDOM);
+
+        });
+
+        panel.on('hidden', (panelDOM) => {
+
+            localEventEmitter.emit(`${eventPrefix}.hidden`, panelDOM);
+
+        });
+
+    }
+
+    let BigImagePanel = null;
+
     function bindShowBigImage(popupRoot) {
 
         const img = popupRoot.querySelector('.thumbnail-img');
@@ -84,13 +102,18 @@ const GeoReferencingController = function() {
 
             img.onclick = async (e) => {
 
+                if(!BigImagePanel) {
+
+                    BigImagePanel = await import("./floating-panel/big-image-panel");
+
+                    bindFloatingPanelEvent(BigImagePanel, "big-image-panel");
+                }
+
                 const target = e.target;
 
                 const url = target.getAttribute('data-big-image') || target.src;
 
-                const {show: showBigImagePanel} = await import("./floating-panel/big-image-panel");
-
-                showBigImagePanel(url);
+                BigImagePanel.show(url);
             }
         }
 

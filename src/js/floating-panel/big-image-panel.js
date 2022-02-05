@@ -1,13 +1,19 @@
 
-import { BootstrapWrap } from '@chmap/utilities';
+import { Commons, BootstrapWrap } from "@chmap/utilities";
 
 const { Offcanvas } = BootstrapWrap;
+
+const localEventEmitter = new Commons.EventEmitterClass();
 
 let panel = null;
 
 let bigImgDom = null;
 
 let loadingDom = null;
+
+function addEventListener(obj, types, fn, context) {
+    localEventEmitter.on(obj, types, fn, context);
+}
 
 function createUI(){
 
@@ -38,6 +44,12 @@ function createUI(){
 
     document.body.append(div);
 
+    bindPointersAndEvents(div);
+
+}
+
+function bindPointersAndEvents(div) {
+
     loadingDom = div.querySelector('.big-img-loading');
 
     bigImgDom = div.querySelector('.big-img');
@@ -46,12 +58,21 @@ function createUI(){
         loadingDom.style.display = 'none';
     }
 
-    panel = new Offcanvas(div.firstChild);
+    const offCanvasDom= div.firstChild;
 
+    panel = new Offcanvas(offCanvasDom);
+
+    // offCanvasDom.addEventListener('shown.bs.offcanvas', () => {
+    //     localEventEmitter.emit('shown', offCanvasDom);
+    // });
+
+    offCanvasDom.addEventListener('hidden.bs.offcanvas', () => {
+        localEventEmitter.emit('hidden', offCanvasDom);
+    });
 
 }
 
-export function show(imageURL){
+function show(imageURL){
 
     if(!panel){
         createUI();
@@ -62,5 +83,11 @@ export function show(imageURL){
     bigImgDom.src = imageURL;
 
     panel.show();
+
+    localEventEmitter.emit('shown', panel._element);
 }
 
+export {
+    show,
+    addEventListener as on,
+}
