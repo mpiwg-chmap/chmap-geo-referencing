@@ -214,7 +214,7 @@ const GeoReferencing = function () {
 
     function getNodeActions(node) {
 
-        const primaryBtnCls = 'btn btn-primary btn-sm mb-1';
+        const primaryBtnCls = 'btn btn-primary btn-sm';
 
         const secondBtnCls = 'btn btn-secondary btn-sm';
 
