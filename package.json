@@ -1,7 +1,7 @@
 {
   "name": "@chmap/geo-referencing",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Users can import a iiif manifest file, then assign a geo-coordinate to image nodes by drag & drop on the leaflet map. Additionally, users can rotate, scale, and distort the shape of an image node for completing a simple geo-referencing.",
   "lib-main": "lib/js/index.js",
   "main": "dis/js/index.js",
   "module": "src/js/index.js",
@@ -13,9 +13,13 @@
     "lib": "npm run clean:lib && babel src --out-dir lib --copy-files",
     "clean:lib": "rm -rf lib && mkdir lib"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "gis",
+    "map",
+    "leaflet"
+  ],
+  "author": "calvin yeh",
+  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.16.7",
     "@babel/runtime-corejs3": "^7.16.8",
