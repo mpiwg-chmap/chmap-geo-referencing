@@ -924,10 +924,10 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@chmap/leaflet-extensions@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@chmap/leaflet-extensions/-/leaflet-extensions-1.0.1.tgz#5cfa05f6a964d039edd3776faf90216deca712fe"
-  integrity sha512-RlNsmcmEfKKZFVMLCc8BYSMJkpYohHnxARVSRI+6aehlGYw4fE7hYiZ431VcVXu9YW/X4uuOYSWIMI0GG3np4w==
+"@chmap/leaflet-extensions@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@chmap/leaflet-extensions/-/leaflet-extensions-1.0.2.tgz#1cde1f948bc641264462d299305622ac5d088fa4"
+  integrity sha512-5UfuECmFhSy/7qyf5hsXVLwat8wb7DczF1PXL7As2o95a5lNz6aX+RsEUONuOfUk7gYtQpMC7acXtguhbXSVtQ==
   dependencies:
     "@babel/runtime" "^7.16.7"
     "@babel/runtime-corejs3" "^7.16.8"
