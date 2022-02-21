@@ -1,6 +1,6 @@
 {
   "name": "@chmap/geo-referencing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Users can import a iiif manifest file, then assign a geo-coordinate to image nodes by drag & drop on the leaflet map. Additionally, users can rotate, scale, and distort the shape of an image node for completing a simple geo-referencing.",
   "lib-main": "lib/js/index.js",
   "main": "dis/js/index.js",
@@ -23,8 +23,8 @@
   "dependencies": {
     "@babel/runtime": "^7.16.7",
     "@babel/runtime-corejs3": "^7.16.8",
-    "@chmap/leaflet-extensions": "^1.0.2",
-    "@chmap/utilities": "^1.0.1",
+    "@chmap/leaflet-extensions": "^1.0.3",
+    "@chmap/utilities": "^1.0.2",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.0",
     "file-saver": "^2.0.5",
