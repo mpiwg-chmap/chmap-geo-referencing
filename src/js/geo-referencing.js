@@ -221,7 +221,7 @@ const GeoReferencing = function () {
         const btns = [];
 
         btns.push(
-        `<button class="${secondBtnCls} show-IIIF-viewer-btn" data-manifest-id="${manifestId}" data-canvas-id="${node.ID}">IIIF Viwer</button>`);
+        `<button class="${secondBtnCls} show-IIIF-viewer-btn" data-manifest-id="${manifestId}" data-canvas-id="${node.ID}">IIIF Viewer</button>`);
 
         btns.push(
         `<button class="${primaryBtnCls} edit-geo-referencing-btn" data-node-id="${node.ID}">Lite Georeference</button>`);
