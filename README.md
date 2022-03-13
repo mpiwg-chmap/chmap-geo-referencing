@@ -4,7 +4,7 @@ Users can import a iiif manifest file and assign geo-coordinates or distort the 
 
 ## Demos
 
-- [example](http://www.github.io/chmap/geo-referencing/example)
+After you downloaded or cloned the project, you can open index.html under the example folder.
 
 ## Getting Started
 
